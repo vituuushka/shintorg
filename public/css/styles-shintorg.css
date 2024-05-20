@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Golos";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/GolosText-Regular.woff") format("woff2");
+  }
+  
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/Inter-VariableFont_slntwght.ttf") format("truetype");
+  }
+@font-face {
+    font-family: "RussoOne";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/RussoOne-Regular.ttf") format("truetype");
+  }
+body {
+    font-family: Inter;
+}
+
+/* product set slider */
+
+.product-item.product-item_wide {
+    border-radius: 10px;
+    border: 1px solid #C5C5C5;
+}
+.product-item_wide .product-item__flag-content {
+    top: auto;
+    bottom: 0;
+    left: 10px;
+    width: auto;
+    gap: 5px;
+}
+.product-item_wide .product-item__flag {
+    transform: skew(-25deg);
+    min-width: auto;
+    padding: 0 15px;
+}
+.product-item_wide .product-item__flag span {
+    transform: skew(25deg);
+}
+.product-item__flag--hit {
+    width: 49px;
+    background: #3D76CA;
+}
+.product-item__flag--sale {
+    width: 66px;
+    background: #BD3A34;
+}
+.product-item__flag--new {
+    width: 78px;
+    background: #278E31;
+}
+.product-item__name {
+    font-size: 13px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-item__parameter {
+    font-family: Golos;
+    line-height: 12px;
+}
+.product-item__parameters {
+    margin-bottom: 10px;
+}
+.product-item__status--many {
+    color: #278E31;
+}
+.product-item__cost-product {
+    font-family: RussoOne;
+    font-weight: 400;
+    color: #2C5694;
+}
+.product-item__cost-product span {
+    font-family: Golos;
+    font-weight: 700;
+}
+.st-button_add-to-cart {
+    gap: 10px;
+    border-radius: 5px;
+    background: #2C5694;
+    border: 1.14px solid #2C5694;
+}
+.st-button_add-to-cart .button__title {
+    font-size: 16px;
+}
