@@ -23,6 +23,113 @@ body {
     font-family: Inter;
 }
 
+/* preimushestva */
+.preim-item {
+    border-radius: 10px;
+    height: 84px;
+    background: linear-gradient(163.45deg, #3D76CA 19.21%, #000000 112.36%);
+}
+
+.preim-item__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.preim-item__link:after {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    right: 15px;
+}
+
+.preim-item__link.preim-1:after {
+    background: url(../images/preim-1.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item__link.preim-2:after {
+    background: url(../images/preim-2.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item__link.preim-3:after {
+    background: url(../images/preim-3.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item__link.preim-4:after {
+    background: url(../images/preim-4.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item__link.preim-5:after {
+    background: url(../images/preim-5.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item__content {
+    width: 62%;
+    padding-left: 15px;
+}
+
+.preim-item__content-text {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #fff;
+}
+
+.preim-item:hover {
+    background: #fff;
+    border: 1px solid #3D76CA;
+}
+
+.preim-item:hover .preim-item__content-text {
+    color: #000000;
+}
+
+.preim-item:hover .preim-item__link.preim-1:after {
+    background: url(../images/preim-1-hover.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item:hover .preim-item__link.preim-2:after {
+    background: url(../images/preim-2-hover.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item:hover .preim-item__link.preim-3:after {
+    background: url(../images/preim-3-hover.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item:hover .preim-item__link.preim-4:after {
+    background: url(../images/preim-4-hover.svg) no-repeat;
+    background-size: cover;
+}
+
+.preim-item:hover .preim-item__link.preim-5:after {
+    background: url(../images/preim-5-hover.svg) no-repeat;
+    background-size: cover;
+}
+
+@media(max-width: 1023px) {
+    .preim-item-4 {
+        display: none;
+    }
+}
+
+@media(max-width: 400px) {
+    .preim-item__link:after {
+        display: none;
+    }
+}
+
 /* product set slider */
 
 .product-set-slider {
@@ -34,6 +141,9 @@ body {
         padding-bottom: 40px;
     }
 
+    .preim-item__content {
+        width: 70%;
+    }
 }
 
 .product-item.product-item_wide {
@@ -149,6 +259,7 @@ body {
         left: -135px;
     }
 }
+
 @media(max-width: 767px) {
     .product-set__title {
         padding-left: 90px;
@@ -232,7 +343,7 @@ body {
 /* expert */
 
 .article-item {
-    background-repeat: 10px;
+    border-radius: 10px;
 }
 
 .article-item img {
@@ -346,35 +457,43 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    
+
 }
+
 .about-us__button button:hover {
     background: linear-gradient(100.99deg, #3D76CA 16.37%, #010101 108.25%);
 
 }
+
 @media(max-width: 767px) {
     .about-us__container {
         background: none;
         padding: 40px 0 0 0;
     }
+
     .about-feedback-wrapper {
         background: url(../images/background-mobile-1-2.svg) no-repeat;
         background-size: cover;
         background-position: bottom;
     }
+
     .about-us__left {
         display: none;
     }
+
     .about-us__button {
         display: none;
     }
+
     .about-us__title {
         padding-left: 90px;
         margin-bottom: 25px;
     }
+
     .about-us__title::before {
         left: -316px;
     }
+
     .about-us__text {
         margin-left: 0px;
     }
@@ -385,23 +504,28 @@ body {
     max-width: 100%;
     margin: 0;
 }
+
 .feedback-form__container {
     background: url(../images/background-desktop-2.svg) no-repeat;
     background-size: cover;
     padding: 70px 40px 0px 40px;
 }
+
 .section-dark.feedback-form {
     padding: 0;
 }
+
 .question-form {
     border-radius: 15px;
     border: none;
 }
+
 @media(min-width: 1280px) {
     .question-form {
         padding: 50px 227px;
     }
 }
+
 section.feedback-form .h2 {
     font-family: RussoOne;
     font-size: 20px;
@@ -411,11 +535,13 @@ section.feedback-form .h2 {
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+
 section.feedback-form .form-control {
     height: 48px;
     border-radius: 10px;
     border: 1px solid #C5C5C5;
 }
+
 .content-name {
     font-family: Inter;
     font-size: 14px;
@@ -423,9 +549,11 @@ section.feedback-form .form-control {
     line-height: 19.6px;
     color: #767676;
 }
+
 .form-control:focus+.label-name .content-name {
     color: #2C5694;
 }
+
 .question-main .btn {
     width: 100%;
     height: 48px;
@@ -438,14 +566,17 @@ section.feedback-form .form-control {
     transition: .0s;
     -webkit-transition: .0s;
 }
+
 .question-main .btn:hover {
     background: linear-gradient(100.99deg, #3D76CA 16.37%, #010101 108.25%);
     border: 1px solid #2C5694;
-    
+
 }
+
 textarea.form-control {
     min-height: 114px;
 }
+
 section.feedback-form .form-text {
     font-family: Inter;
     font-size: 14px;
@@ -453,15 +584,18 @@ section.feedback-form .form-text {
     line-height: 16.8px;
     color: #767676;
 }
+
 @media(max-width: 767px) {
     .feedback-form__container {
         background: none;
         background-color: transparent;
         padding: 40px 0 0 0;
     }
+
     section.feedback-form {
         background-color: transparent !important;
     }
+
     section.feedback-form .form-text {
         display: none;
     }
@@ -474,31 +608,37 @@ footer {
     padding: 0;
     background: none;
 }
+
 .footer-container {
     background: url(../images/background-desktop-3.svg) no-repeat;
     background-size: cover;
     padding: 70px 40px 110px 40px;
 }
+
 .footer-contact__number {
     font-family: RussoOne;
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
 }
+
 .footer-contact__link {
     font-family: Inter;
     font-size: 14px;
     font-weight: 500;
     line-height: 19.6px;
 }
+
 .footer-contact {
     gap: 5px;
     display: flex;
     flex-direction: column;
 }
+
 .footer-first-column .logo img {
     min-width: 208px;
 }
+
 .footer-content__title {
     font-family: RussoOne;
     font-size: 20px;
@@ -507,9 +647,11 @@ footer {
     text-transform: uppercase;
     margin-bottom: 12px;
 }
+
 .footer-content__column li {
     margin-bottom: 8px;
-} 
+}
+
 .footer-content__column a {
     font-family: Inter;
     font-size: 14px;
@@ -517,6 +659,7 @@ footer {
     line-height: 19.6px;
     color: #fff;
 }
+
 .footer-content__title span {
     font-family: Inter;
     font-size: 14px;
@@ -528,7 +671,8 @@ footer {
     margin-top: 7px;
     margin-bottom: 20px;
 }
-.footer-subscribe input  {
+
+.footer-subscribe input {
     height: 48px;
     border-radius: 10px 0 0 10px;
     font-family: Inter;
@@ -538,6 +682,7 @@ footer {
     color: #767676;
     width: calc(100% - 150px);
 }
+
 .footer-subscribe input::placeholder {
     font-family: Inter;
     font-size: 12px;
@@ -545,7 +690,8 @@ footer {
     line-height: 14.52px;
     color: #767676;
 }
-.footer-subscribe button  {
+
+.footer-subscribe button {
     height: 48px;
     width: 150px;
     border-radius: 0 10px 10px 0;
@@ -556,16 +702,20 @@ footer {
     font-weight: 400;
     line-height: 19.36px;
 }
+
 .footer-subscribe button:hover {
     background: linear-gradient(100.99deg, #3D76CA 16.37%, #010101 108.25%) !important;
     border: 1px solid #2C5694 !important;
 }
+
 .footer-right {
     width: 355px;
 }
+
 .footer-subscribe {
     box-shadow: 0px 4px 4px 0px #00000024;
 }
+
 .developer-link a {
     font-family: Inter;
     font-size: 14px;
@@ -573,53 +723,66 @@ footer {
     line-height: 16.94px;
     color: #fff;
 }
+
 @media(max-width: 767px) {
     .footer-container {
         background: none;
         padding: 50px 0 0 0;
     }
+
     footer {
         background: url(../images/background-mobile-3.svg) no-repeat;
         background-size: cover;
         background-position: top;
     }
+
     .footer-content__menu .footer-content__title {
         font-size: 14px;
         font-weight: 400;
         line-height: 19.6px;
     }
+
     .developer-link-mobile {
         margin-top: 40px;
     }
+
     .footer-right {
         width: 100%;
     }
 
 }
+
 @media(min-width: 768px) {
     .developer-link-mobile {
         display: none;
     }
 }
+
 @media(min-width: 768px) and (max-width: 991px) {
     .footer-right {
         width: 220px;
     }
+
     .footer-subscribe button {
         width: 120px;
     }
+
     .footer-subscribe input {
         width: calc(100% - 120px);
     }
+
     .footer-contact__number {
         font-size: 17px;
     }
+
     .footer-first-column .logo img {
         min-width: 170px;
     }
+
     .footer-first-column {
         width: 170px;
     }
+
     .footer-content__title {
         font-size: 15px;
     }
