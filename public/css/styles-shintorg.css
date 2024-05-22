@@ -23,7 +23,219 @@ body {
     font-family: Inter;
 }
 
+/* header */
+
+.header-default .logo {
+    width: 220px;
+}
+
+.header-search--inner {
+    width: calc(100% - 700px);
+}
+
+@media(max-width: 1279px) {
+    .header-search--inner {
+        width: calc(100% - 550px);
+    }
+}
+
+@media(max-width: 991px) {
+    .header-search--inner {
+        display: none;
+    }
+}
+
+@media(min-width: 991px) {
+    .header-cart.cart-mobile {
+        display: none;
+    }
+}
+
+.header-search input {
+    border: 1px solid #C5C5C5;
+    background-color: transparent;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    width: calc(100% - 53px);
+    border-radius: 10px;
+}
+
+.header-search button {
+    width: 48px;
+    border-radius: 10px;
+    border: 1px solid #C5C5C5;
+}
+
+.header-phones__inner {
+    font-family: RussoOne;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #2C5694;
+}
+
+.btn-border.callme-button {
+    background: #2C5694 !important;
+    border-radius: 10px;
+    border: none;
+    color: #fff !important;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    height: 48px;
+}
+
+.btn-border.callme-button:hover {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+[data-fancybox] {
+    cursor: pointer;
+}
+
+.header-body {
+    background: #fff;
+}
+
+.catalog-inner-btn {
+    background: #fff;
+    border: 1px solid #3D76CA;
+    color: #000;
+    border-radius: 10px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    gap: 10px;
+}
+
+.main-menu a {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000;
+    opacity: 1;
+}
+
+.main-menu a:hover {
+    color: #2C5694;
+    text-decoration: none;
+}
+
+.header-user__link {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 8.29px;
+    color: #2C5694;
+}
+
+.catalog-burger {
+    display: flex;
+    align-items: center;
+}
+
+.header-body__content-right {
+    gap: 25px;
+}
+
+.header-cart {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.header-cart .icon {
+    position: relative;
+}
+
+.header-cart .icon img {
+    right: 0;
+}
+
+.header-cart span.cart-number {
+    border: 0.97px solid #C5C5C5;
+    background: transparent;
+    width: 17px;
+    height: 17px;
+    color: #2C5694;
+    font-family: Inter;
+    font-size: 9.67px;
+    font-weight: 400;
+    line-height: 8.29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:1279px) {
+    .catalog-inner-btn {
+        min-width: 150px;
+        width: 150px;
+    }
+
+    .main-menu a {
+        font-size: 13px;
+    }
+
+    .main-menu li {
+        margin-right: 13px;
+    }
+
+    .main-menu {
+        margin-left: 5px;
+    }
+
+    .header-default .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 991px) {
+    .top-header__content-right {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .top-header__content-right {
+        padding-right: 15px;
+    }
+
+    .header-cart span.cart-number {
+        width: 13px;
+        height: 13px;
+        font-size: 7px;
+        font-weight: 400;
+        line-height: 6px;
+        top: 4px;
+        right: -13px;
+    }
+
+    .burger-menu {
+        width: auto;
+        height: auto;
+    }
+}
+
 /* preimushestva */
+.preimushestva-section {
+    margin-top: 20px;
+}
+
+@media(max-width:767px) {
+    .preimushestva-section {
+        margin-top: 40px;
+    }
+}
+
 .preim-item {
     border-radius: 10px;
     height: 84px;
