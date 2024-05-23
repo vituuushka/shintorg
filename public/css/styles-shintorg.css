@@ -225,6 +225,172 @@ body {
     }
 }
 
+/* home banner */
+
+.home-banner__container {
+    background: linear-gradient(105.55deg, #3D76CA 33.45%, #000000 114.32%);
+    border-radius: 10px;
+    position: relative;
+}
+
+.home-banner__slide {
+    height: 465px;
+}
+
+.home-banner .slide-content {
+    background: transparent;
+    right: 230px;
+    top: 46px;
+    margin: 0;
+
+}
+
+.home-banner__slide .image {
+    position: absolute;
+    width: 28%;
+    right: 0;
+    bottom: 35px;
+}
+
+.home-banner__title {
+    font-family: RussoOne;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 29.7px;
+    color: #fff;
+}
+
+.home-banner__subtitle {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    color: #fff;
+}
+
+.home-banner__button {
+    width: 177px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #3D76CA;
+    background: #3D76CA;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.home-banner__button:hover {
+    background: linear-gradient(100.99deg, #3D76CA 16.37%, #010101 108.25%);
+}
+
+@media(min-width: 768px) {
+    .home-banner .slide-content {
+        max-width: 385px;
+        position: absolute;
+        left: auto;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1279px) {
+    .home-banner .slide-content {
+        right: 40px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .home-banner .slide-content {
+        right: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .home-banner__button {
+        width: 100%;
+        margin-top: 270px;
+    }
+
+    .home-banner .slide-content {
+        max-width: 100%;
+        padding: 0;
+        align-items: stretch;
+        padding: 0 30px 0 30px;
+    }
+
+    .home-banner__slide .image {
+        width: 300px;
+    }
+
+    .home-banner__slide {
+        height: 550px;
+    }
+
+    .home-banner__container:after {
+        width: 245px;
+    }
+
+    .home-banner__slide .image {
+        bottom: 165px;
+    }
+
+    .home-banner__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .home-banner__container {
+        background: none;
+        border-radius: 0;
+    }
+
+    .home-banner {
+        background: linear-gradient(127.33deg, #3D76CA 35.15%, #010101 78.1%);
+    }
+
+
+}
+
+.main-slider .owl-dots {
+    display: block;
+
+}
+
+.owl-dot span {
+    display: none !important;
+}
+
+.main-slider .owl-dots {
+    bottom: 30px;
+    left: 50%;
+    width: auto;
+}
+
+.owl-dot {
+    border-radius: 0 !important;
+    background: #3D76CA;
+    border-width: 0px !important;
+    width: 7px !important;
+    height: 12px !important;
+    transform: skew(-20deg);
+}
+
+.owl-dot.active {
+    background: #fff;
+}
+
+.home-banner .owl-dot:not(:last-child) {
+    margin-right: 6px;
+}
+
+.owl-nav {
+    display: none !important;
+}
+
 /* preimushestva */
 .preimushestva-section {
     margin-top: 20px;
