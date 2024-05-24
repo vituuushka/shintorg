@@ -225,6 +225,143 @@ body {
     }
 }
 
+/* tire filter */
+
+.tire-container {
+    position: absolute;
+    width: 540px;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+.tire-container .tabsgroup {
+    margin-bottom: 0px;
+}
+
+@media(max-width: 767px) {
+    .tire-container .tab-content {
+        width: 100%;
+    }
+}
+
+.parameter-select.disabled .selected-option:before {
+    background: url(../images/filter-disabled-arrow.svg);
+    background-size: cover;
+}
+
+.parameter-select .selected-option:before {
+    background: url(../images/filter-black-arrow.svg);
+    background-size: cover;
+}
+
+.tire-container .tabs li {
+    background: #2C5694;
+    border-radius: 10px;
+    width: 111px;
+    color: #fff;
+}
+
+.tire-container .tabs li.active {
+    background: #fff;
+    color: #000;
+}
+
+.tire-container .tab-content {
+    /* padding: 115px 32px 32px 32px; */
+    border-radius: 20px;
+}
+
+.tire-container .tabs {
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.tire-container h2 {
+    font-family: RussoOne;
+    font-size: 22px;
+    line-height: 24px;
+    color: #2C5694;
+    text-transform: uppercase;
+}
+
+@media(max-width: 991px) {
+    .tire-container {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 40px 40px 0 40px;
+        min-height: 100px;
+    }
+
+    .tire-container .tabs li {
+        width: 192px;
+    }
+}
+
+.filter-parameter span,
+.filter-auto span {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.tire-container .custom-toggle {
+    background-color: #C5C5C5;
+}
+
+.button-parameter {
+    border: 1px solid #2C5694;
+    background: #2C5694;
+    border-radius: 5px;
+    transition: 0s;
+}
+
+.button-parameter:hover {
+    background: linear-gradient(100.99deg, #3D76CA 16.37%, #010101 108.25%);
+    border: 1px solid #2C5694;
+    color: #fff;
+}
+
+@media(max-width: 767px) {
+    .tire-container h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .tire-container .tabs-slider-mobile .slider-item {
+        width: 100% !important;
+        border: 1px solid #2C5694;
+        border-radius: 5px;
+        background-color: #2C5694;
+        padding: 0;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .slider-item__title {
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .tire-container .tabs-slider-mobile .slider-item:hover,
+    .tire-container .tabs-slider-mobile .slider-item.active {
+        border: 1px solid #3D76CA;
+        background-color: #fff;
+
+    }
+
+    .tire-container .tabs-slider-mobile .slider-item:hover .slider-item__title,
+    .tire-container .tabs-slider-mobile .slider-item.active .slider-item__title {
+        color: #000000 !important;
+    }
+}
+
 /* home banner */
 
 .home-banner__container {
@@ -234,7 +371,7 @@ body {
 }
 
 .home-banner__slide {
-    height: 465px;
+    height: 500px;
 }
 
 .home-banner .slide-content {
@@ -299,13 +436,29 @@ body {
 
 @media(min-width: 992px) and (max-width: 1279px) {
     .home-banner .slide-content {
-        right: 40px;
+        right: 0px;
+        max-width: 320px;
+        padding-left: 0;
     }
 }
 
 @media(min-width: 768px) and (max-width: 991px) {
     .home-banner .slide-content {
-        right: 20px;
+        right: auto;
+        padding: 20px 40px;
+    }
+
+    .home-banner__slide {
+        height: 350px;
+    }
+
+    .home-banner__slide .image {
+        width: 310px;
+        bottom: 70px;
+    }
+
+    .home-banner__container:after {
+        width: 35%;
     }
 }
 
@@ -390,6 +543,7 @@ body {
 .owl-nav {
     display: none !important;
 }
+
 
 /* preimushestva */
 .preimushestva-section {

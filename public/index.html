@@ -14,9 +14,12 @@
   <link rel="stylesheet" href="https://luzhetskiy.github.io/stroyker-k1-html-dev/css/styles.css" />
   <script defer src="https://luzhetskiy.github.io/stroyker-k1-html-dev/libs/jquery/jquery.js"></script>
   <script defer src="https://luzhetskiy.github.io/stroyker-k1-html-dev/libs/owl-carousel/owl-carousel.js"></script>
+  <script defer src="./libs/popper/popper.min.js"></script>
+  <script defer src="./libs/tippy/tippy.min.js"></script>
   <script defer src="https://luzhetskiy.github.io/stroyker-k1-html-dev/libs/slick/slick.js"></script>
   <script defer src="https://luzhetskiy.github.io/stroyker-k1-html-dev/libs/mmenu/mmenu.js"></script>
   <script defer src="https://luzhetskiy.github.io/stroyker-k1-html-dev/js/scripts.js"></script>
+
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./css/styles-shintorg.css" />
   <link rel="stylesheet" href="./css/styles.css" />
@@ -284,7 +287,1210 @@
   <main>
     <section class="home-banner main-slider">
       <div class="container">
+
         <div class="home-banner__container">
+          <div class="tire-container">
+            <div class="tabs-container">
+              <div class="tabs-content">
+                <ul class="tabs">
+                  <li class="active" rel="tab1">Шины</li>
+                  <li rel="tab2" class="tab_last">Диски</li>
+                  <li rel="tab3" class="tab_last">Мото</li>
+                  <li rel="tab4" class="tab_last">АКБ</li>
+                </ul>
+                <div class="tabs-slider-mobile">
+                  <div class="slider-item" data-tab="tab1">
+                    <span class="slider-item__title">Шины</span>
+                  </div>
+                  <div class="slider-item" data-tab="tab2">
+                    <span class="slider-item__title">Диски</span>
+                  </div>
+                  <div class="slider-item" data-tab="tab3">
+                    <span class="slider-item__title">Мото</span>
+                  </div>
+                  <div class="slider-item" data-tab="tab4">
+                    <span class="slider-item__title">АКБ</span>
+                  </div>
+                </div>
+                <div class="tabsgroup">
+                  <span class="tab_drawer_heading d_active" rel="tab1">
+                    <span class="icon"><svg class="icon-svg">
+                        <use xlink:href="#tab-arrow"></use>
+                      </svg></span>
+                    Шины
+                  </span>
+                  <div id="tab1" class="tab-content">
+                    <div class="text-page">
+                      <h2>Поиск легковых шин</h2>
+                      <div class="filter-choice">
+                        <div class="filter-parameter">
+                          <span class="po-parametram">По параметрам</span>
+                        </div>
+                        <div class="filter-toggle">
+                          <label for="checkbox-toggle" class="toggle">
+                            <input id="checkbox-toggle" type="checkbox" class="toggle-input">
+                            <span class="custom-toggle"></span>
+                          </label>
+                        </div>
+                        <div class="filter-auto">
+                          <span class="po-auto disactive">По автомобилю</span>
+                          <span class="po-auto disactive mobile">По авто</span>
+                          <span id="auto-modal-btn" class="parameter__modal-button po-auto__modal-button">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="auto-modal-content">
+                            <div class="row">
+                              <div class="col-lg-7">
+                                <p class="auto-modal-title">Типоразмер шин авто</p>
+                                <p class="auto-modal-text">Типоразмер указан в маркировке на боковине шины:
+                                </p>
+                                <p class="auto-modal-text">Ширина профиля шины — первое число в маркировке,
+                                  например
+                                  195/50 R16 -
+                                  ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                  миллиметрах
+                                  расстояние между наружными
+                                  сторонами боковин накачанной шины.</p>
+                                <p class="auto-modal-text">Высота профиля — второе число в маркировке шин,
+                                  например
+                                  195/50 R16 -
+                                  высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
+                                  (%).
+                                </p>
+                                <p class="auto-modal-text">Монтажный диаметр — третье число в маркировке
+                                  шины,
+                                  например 195/50 R16 -
+                                  диаметр обода 16'. Должен совпадать с монтажным диаметром колесного
+                                  диска.
+                                  Измеряется в дюймах.</p>
+                              </div>
+                              <div class="col-lg-5">
+                                <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                              </div>
+                            </div>
+                          </div>
+                          <span class="parameter__modal-button auto__modal-button-mobile">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="parameter-modal-mobile po-auto__modal-mobile">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <p class="parameter-modal-title">Типоразмер шин авто</p>
+                                  <p class="parameter-modal-text">Типоразмер указан в маркировке на
+                                    боковине
+                                    шины:
+                                  </p>
+                                  <p class="parameter-modal-text">Ширина профиля шины — первое число в
+                                    маркировке,
+                                    например 195/50 R16
+                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                    миллиметрах
+                                    расстояние между
+                                    наружными сторонами боковин накачанной шины.</p>
+                                  <p class="parameter-modal-text">Высота профиля — второе число в
+                                    маркировке
+                                    шин,
+                                    например 195/50 R16
+                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
+                                    процентах
+                                    (%).</p>
+                                  <p class="parameter-modal-text">Монтажный диаметр — третье число в
+                                    маркировке
+                                    шины, например 195/50
+                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
+                                    колесного
+                                    диска. Измеряется в
+                                    дюймах.</p>
+                                </div>
+                                <div class="col-lg-12">
+                                  <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                                </div>
+                                <span class="parameter-close-button po-auto-close-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-content">
+                        <div class="parameter-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Ширина</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Ширина</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Профиль</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Профиль</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">12</div>
+                                      <div class="select-option">35</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Радиус</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Радиус</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">2</div>
+                                      <div class="select-option">3</div>
+                                      <div class="select-option">4</div>
+                                      <div class="select-option">5</div>
+                                      <div class="select-option">6</div>
+                                      <div class="select-option">7</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Сезонность</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Сезонность</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">Всесезонные</div>
+                                      <div class="select-option">Летние</div>
+                                      <div class="select-option">Зимние</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <a href="#" class="button-parameter">Подобрать</a>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-reset__container">
+                                <button class="button-reset">Сбросить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="auto-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Марка</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Марка</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select disabled">
+                                  <div class="selector">
+                                    <span class="selected-option">Модель</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Модель</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select disabled">
+                                  <div class="selector">
+                                    <span class="selected-option">Поколение</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Поколение</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select disabled">
+                                  <div class="selector">
+                                    <span class="selected-option">Модификация</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option name">Модификация</div>
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <a href="#" class="button-parameter disabled">Подобрать</a>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <button class="button-reset">Сбросить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- #tab1 -->
+                  <span class="tab_drawer_heading" rel="tab2">
+                    <span class="icon"><svg class="icon-svg">
+                        <use xlink:href="#tab-arrow"></use>
+                      </svg></span>
+                    Диски
+                  </span>
+                  <div id="tab2" class="tab-content" style="display: none">
+                    <div class="text-page">
+                      <h2>Быстрый подбор шин</h2>
+                      <div class="filter-choice">
+                        <div class="filter-parameter">
+                          <span class="po-parametram">По параметрам</span>
+                        </div>
+                        <div class="filter-toggle">
+                          <label for="checkbox-toggle" class="toggle">
+                            <input id="checkbox-toggle" type="checkbox" class="toggle-input">
+                            <span class="custom-toggle"></span>
+                          </label>
+                        </div>
+                        <div class="filter-auto">
+                          <span class="po-auto disactive">По автомобилю</span>
+                          <span class="po-auto disactive mobile">По авто</span>
+                          <span id="auto-modal-btn" class="parameter__modal-button po-auto__modal-button">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="auto-modal-content">
+                            <div class="row">
+                              <div class="col-lg-7">
+                                <p class="auto-modal-title">Типоразмер шин авто</p>
+                                <p class="auto-modal-text">Типоразмер указан в маркировке на боковине шины:
+                                </p>
+                                <p class="auto-modal-text">Ширина профиля шины — первое число в маркировке,
+                                  например
+                                  195/50 R16 -
+                                  ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                  миллиметрах
+                                  расстояние между наружными
+                                  сторонами боковин накачанной шины.</p>
+                                <p class="auto-modal-text">Высота профиля — второе число в маркировке шин,
+                                  например
+                                  195/50 R16 -
+                                  высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
+                                  (%).
+                                </p>
+                                <p class="auto-modal-text">Монтажный диаметр — третье число в маркировке
+                                  шины,
+                                  например 195/50 R16 -
+                                  диаметр обода 16'. Должен совпадать с монтажным диаметром колесного
+                                  диска.
+                                  Измеряется в дюймах.</p>
+                              </div>
+                              <div class="col-lg-5">
+                                <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                              </div>
+                            </div>
+                          </div>
+                          <span class="parameter__modal-button auto__modal-button-mobile">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="parameter-modal-mobile po-auto__modal-mobile">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <p class="parameter-modal-title">Типоразмер шин авто</p>
+                                  <p class="parameter-modal-text">Типоразмер указан в маркировке на
+                                    боковине
+                                    шины:
+                                  </p>
+                                  <p class="parameter-modal-text">Ширина профиля шины — первое число в
+                                    маркировке,
+                                    например 195/50 R16
+                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                    миллиметрах
+                                    расстояние между
+                                    наружными сторонами боковин накачанной шины.</p>
+                                  <p class="parameter-modal-text">Высота профиля — второе число в
+                                    маркировке
+                                    шин,
+                                    например 195/50 R16
+                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
+                                    процентах
+                                    (%).</p>
+                                  <p class="parameter-modal-text">Монтажный диаметр — третье число в
+                                    маркировке
+                                    шины, например 195/50
+                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
+                                    колесного
+                                    диска. Измеряется в
+                                    дюймах.</p>
+                                </div>
+                                <div class="col-lg-12">
+                                  <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                                </div>
+                                <span class="parameter-close-button po-auto-close-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-content">
+                        <div class="parameter-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Ширина</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Профиль</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">12</div>
+                                      <div class="select-option">35</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Радиус</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">2</div>
+                                      <div class="select-option">3</div>
+                                      <div class="select-option">4</div>
+                                      <div class="select-option">5</div>
+                                      <div class="select-option">6</div>
+                                      <div class="select-option">7</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Сезонность</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">Всесезонные</div>
+                                      <div class="select-option">Летние</div>
+                                      <div class="select-option">Зимние</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <div class="button-parameter__container">
+                                  <a href="#" class="button-parameter">Подобрать</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-reset__container">
+                                <button class="button-reset">Сбросить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="auto-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Марка:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Модель:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Поколение:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Модификация:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <a href="#" class="button-parameter disabled">Подобрать</a>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <button class="button-reset">Сбросить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #tab2 -->
+                  <span class="tab_drawer_heading" rel="tab3">
+                    <span class="icon"><svg class="icon-svg">
+                        <use xlink:href="#tab-arrow"></use>
+                      </svg></span>
+                    Мото
+                  </span>
+                  <div id="tab3" class="tab-content" style="display: none">
+                    <div class="text-page">
+                      <h2>Быстрый подбор шин</h2>
+                      <div class="filter-choice">
+                        <div class="filter-parameter">
+                          <span class="po-parametram">По параметрам</span>
+                        </div>
+                        <div class="filter-toggle">
+                          <label for="checkbox-toggle" class="toggle">
+                            <input id="checkbox-toggle" type="checkbox" class="toggle-input">
+                            <span class="custom-toggle"></span>
+                          </label>
+                        </div>
+                        <div class="filter-auto">
+                          <span class="po-auto disactive">По автомобилю</span>
+                          <span class="po-auto disactive mobile">По авто</span>
+                          <span id="auto-modal-btn" class="parameter__modal-button po-auto__modal-button">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="auto-modal-content">
+                            <div class="row">
+                              <div class="col-lg-7">
+                                <p class="auto-modal-title">Типоразмер шин авто</p>
+                                <p class="auto-modal-text">Типоразмер указан в маркировке на боковине шины:
+                                </p>
+                                <p class="auto-modal-text">Ширина профиля шины — первое число в маркировке,
+                                  например
+                                  195/50 R16 -
+                                  ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                  миллиметрах
+                                  расстояние между наружными
+                                  сторонами боковин накачанной шины.</p>
+                                <p class="auto-modal-text">Высота профиля — второе число в маркировке шин,
+                                  например
+                                  195/50 R16 -
+                                  высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
+                                  (%).
+                                </p>
+                                <p class="auto-modal-text">Монтажный диаметр — третье число в маркировке
+                                  шины,
+                                  например 195/50 R16 -
+                                  диаметр обода 16'. Должен совпадать с монтажным диаметром колесного
+                                  диска.
+                                  Измеряется в дюймах.</p>
+                              </div>
+                              <div class="col-lg-5">
+                                <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                              </div>
+                            </div>
+                          </div>
+                          <span class="parameter__modal-button auto__modal-button-mobile">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="parameter-modal-mobile po-auto__modal-mobile">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <p class="parameter-modal-title">Типоразмер шин авто</p>
+                                  <p class="parameter-modal-text">Типоразмер указан в маркировке на
+                                    боковине
+                                    шины:
+                                  </p>
+                                  <p class="parameter-modal-text">Ширина профиля шины — первое число в
+                                    маркировке,
+                                    например 195/50 R16
+                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                    миллиметрах
+                                    расстояние между
+                                    наружными сторонами боковин накачанной шины.</p>
+                                  <p class="parameter-modal-text">Высота профиля — второе число в
+                                    маркировке
+                                    шин,
+                                    например 195/50 R16
+                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
+                                    процентах
+                                    (%).</p>
+                                  <p class="parameter-modal-text">Монтажный диаметр — третье число в
+                                    маркировке
+                                    шины, например 195/50
+                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
+                                    колесного
+                                    диска. Измеряется в
+                                    дюймах.</p>
+                                </div>
+                                <div class="col-lg-12">
+                                  <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                                </div>
+                                <span class="parameter-close-button po-auto-close-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-content">
+                        <div class="parameter-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Ширина</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Профиль</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">12</div>
+                                      <div class="select-option">35</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Радиус</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">2</div>
+                                      <div class="select-option">3</div>
+                                      <div class="select-option">4</div>
+                                      <div class="select-option">5</div>
+                                      <div class="select-option">6</div>
+                                      <div class="select-option">7</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Сезонность</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">Всесезонные</div>
+                                      <div class="select-option">Летние</div>
+                                      <div class="select-option">Зимние</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <div class="button-parameter__container">
+                                  <a href="#" class="button-parameter">Подобрать</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-reset__container">
+                                <button class="button-reset">Сбросить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="auto-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Марка:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Модель:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Поколение:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Модификация:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <a href="#" class="button-parameter disabled">Подобрать</a>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <button class="button-reset">Сбросить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #tab3 -->
+                  <span class="tab_drawer_heading" rel="tab4">
+                    <span class="icon"><svg class="icon-svg">
+                        <use xlink:href="#tab-arrow"></use>
+                      </svg></span>
+                    АКБ
+                  </span>
+                  <div id="tab4" class="tab-content" style="display: none">
+                    <div class="text-page">
+                      <h2>Быстрый подбор шин</h2>
+                      <div class="filter-choice">
+                        <div class="filter-parameter">
+                          <span class="po-parametram">По параметрам</span>
+                        </div>
+                        <div class="filter-toggle">
+                          <label for="checkbox-toggle" class="toggle">
+                            <input id="checkbox-toggle" type="checkbox" class="toggle-input">
+                            <span class="custom-toggle"></span>
+                          </label>
+                        </div>
+                        <div class="filter-auto">
+                          <span class="po-auto disactive">По автомобилю</span>
+                          <span class="po-auto disactive mobile">По авто</span>
+                          <span id="auto-modal-btn" class="parameter__modal-button po-auto__modal-button">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="auto-modal-content">
+                            <div class="row">
+                              <div class="col-lg-7">
+                                <p class="auto-modal-title">Типоразмер шин авто</p>
+                                <p class="auto-modal-text">Типоразмер указан в маркировке на боковине шины:
+                                </p>
+                                <p class="auto-modal-text">Ширина профиля шины — первое число в маркировке,
+                                  например
+                                  195/50 R16 -
+                                  ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                  миллиметрах
+                                  расстояние между наружными
+                                  сторонами боковин накачанной шины.</p>
+                                <p class="auto-modal-text">Высота профиля — второе число в маркировке шин,
+                                  например
+                                  195/50 R16 -
+                                  высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
+                                  (%).
+                                </p>
+                                <p class="auto-modal-text">Монтажный диаметр — третье число в маркировке
+                                  шины,
+                                  например 195/50 R16 -
+                                  диаметр обода 16'. Должен совпадать с монтажным диаметром колесного
+                                  диска.
+                                  Измеряется в дюймах.</p>
+                              </div>
+                              <div class="col-lg-5">
+                                <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                              </div>
+                            </div>
+                          </div>
+                          <span class="parameter__modal-button auto__modal-button-mobile">
+                            <img src="../images/tire-modal-btn.svg" alt="">
+                          </span>
+                          <div class="parameter-modal-mobile po-auto__modal-mobile">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <p class="parameter-modal-title">Типоразмер шин авто</p>
+                                  <p class="parameter-modal-text">Типоразмер указан в маркировке на
+                                    боковине
+                                    шины:
+                                  </p>
+                                  <p class="parameter-modal-text">Ширина профиля шины — первое число в
+                                    маркировке,
+                                    например 195/50 R16
+                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
+                                    миллиметрах
+                                    расстояние между
+                                    наружными сторонами боковин накачанной шины.</p>
+                                  <p class="parameter-modal-text">Высота профиля — второе число в
+                                    маркировке
+                                    шин,
+                                    например 195/50 R16
+                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
+                                    процентах
+                                    (%).</p>
+                                  <p class="parameter-modal-text">Монтажный диаметр — третье число в
+                                    маркировке
+                                    шины, например 195/50
+                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
+                                    колесного
+                                    диска. Измеряется в
+                                    дюймах.</p>
+                                </div>
+                                <div class="col-lg-12">
+                                  <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
+                                </div>
+                                <span class="parameter-close-button po-auto-close-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-content">
+                        <div class="parameter-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Ширина</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Профиль</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">12</div>
+                                      <div class="select-option">35</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Радиус</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">1</div>
+                                      <div class="select-option">2</div>
+                                      <div class="select-option">3</div>
+                                      <div class="select-option">4</div>
+                                      <div class="select-option">5</div>
+                                      <div class="select-option">6</div>
+                                      <div class="select-option">7</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <div class="selector">
+                                    <span class="selected-option">Сезонность</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">Всесезонные</div>
+                                      <div class="select-option">Летние</div>
+                                      <div class="select-option">Зимние</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <div class="button-parameter__container">
+                                  <a href="#" class="button-parameter">Подобрать</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-reset__container">
+                                <button class="button-reset">Сбросить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="auto-block">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Марка:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Модель:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Поколение:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="parameter-list">
+                                <div class="parameter-select">
+                                  <span class="parameter-title">Модификация:</span>
+                                  <div class="selector">
+                                    <span class="selected-option">Все</span>
+                                    <input type="text" class="select-search-input">
+                                    <div class="select-options">
+                                      <div class="select-option">Все</div>
+                                      <div class="select-option">10</div>
+                                      <div class="select-option">15</div>
+                                      <div class="select-option">50</div>
+                                      <div class="select-option">75</div>
+                                      <div class="select-option">130</div>
+                                      <div class="select-option">170</div>
+                                      <div class="select-option">200</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row parameter-buttons">
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <div class="button-parameter__container">
+                                <a href="#" class="button-parameter disabled">Подобрать</a>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                              <button class="button-reset">Сбросить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- #tab4 -->
+
+
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="owl-carousel owl-loaded owl-drag" data-show-dots data-autoplay-timeout="5">
             <div class="home-banner__slide">
               <div class="image">
